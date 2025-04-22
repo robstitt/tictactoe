@@ -14,22 +14,25 @@
  *  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  *  for the specific language governing permissions and limitations under the License.
  *
- *  The grid consists of columns A, B, and C and rows 1, 2, and 3 (noted here as: A1, A2, A3, B1, B2, B3, C1, C2, C3).
+ *  The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3).
  *
- *  For the sake of using a button push to set the squares, these correspond to 1, 2, 3, 4, 5, 6, 7, 8, 9 (in that order)
+ *  The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the current player,
+ *  initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each square
+ *  are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
  *
- *  The Undo function is also triggered by a "Hold" on button number 39
+ *  To "undo" the previous move, initiate a "hold button 39" on the virtual device.
  *
- *  The Reset function is also triggered by a "Push on button number 39
+ *  To "reset" the game, initiate a "push button 39" on the virtual device
  *
+ *-------------------------------------------------------------------------------------------------------------------
  *
  * Created: 02/16/2024
  *
  * Last Update: 04/22/2025 - v1.1.0
+ *    - Initial published release
  *    - Detect a stalemate
+ *    - Accept String, Int, and BigDecimal values for push/hold/release
  *
- * Last Update: mm/dd/yyyy
- *    - (?)
  */
 
 metadata {
@@ -274,8 +277,18 @@ String tryValue (String square, String tryFill) {
    return retval
 }
 
-@java.lang.SuppressWarnings('unused')
 void push(String sbutton) {
+    int button = sbutton as Integer
+    push(button)
+}
+
+void push(BigDecimal sbutton) {
+    int button = sbutton as Integer
+    push(button)
+}
+
+//@java.lang.SuppressWarnings('unused')
+void push(int sbutton) {
     int button = sbutton as Integer
 
     if (logEnable) log.info "${device.displayName} Button ${button} was pushed for player ${state.sPlayer}"
@@ -385,8 +398,18 @@ void push(String sbutton) {
     if (sbutton != "39") checkBoard()
 }
 
-@java.lang.SuppressWarnings('unused')
 void hold(String sbutton) {
+    int button = sbutton as Integer
+    hold(button)
+}
+
+void hold(BigDecimal sbutton) {
+    int button = sbutton as Integer
+    hold(button)
+}
+
+//@java.lang.SuppressWarnings('unused')
+void hold(int sbutton) {
     int button = sbutton as Integer
 
     if (logEnable) log.info "${device.displayName} Button ${button} was held"
@@ -478,7 +501,19 @@ void hold(String sbutton) {
     checkBoard()
 }
 
-@java.lang.SuppressWarnings('unused')
-void release(button) {
-  if (logEnable) log.info "${device.displayName} Ignoring release of button=$button"
+void release(String sbutton) {
+    int button = sbutton as Integer
+    release(button)
+}
+
+void release(BigDecimal sbutton) {
+    int button = sbutton as Integer
+    release(button)
+}
+
+//@java.lang.SuppressWarnings('unused')
+void release(int sbutton) {
+    int button = sbutton as Integer
+
+    if (logEnable) log.info "${device.displayName} Ignoring release of button=${button}"
 }
