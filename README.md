@@ -1,29 +1,33 @@
 # tictactoe
 Tic Tac Toe Driver For Hubitat
 
-This driver supports creating a Tic-Tac-Toe device that can be used in a dashboard to create a Tic-Tac-Toe game running on the Hubitat. 
+This driver is intended to be assigned to a manually created "virtual device" on the Hubitat Home Automation platform. This "Tic-Tac-Toe" device can be with a dashboard and Rule Manager rules/scripts to allow playing a Tic-Tac-Toe game. 
 
-It can also be used to control smart automation devices of the user's choosing (the scripting, devices, etc. are NOT included and they are NOT supported).
+If desired, physical, smart home RGBW bulbs (or other desired smart home devices) can controlled using Rule Manager rules/scripts to create a visual Tic-Tac-Toe display board. 
 
-This is SOLELY intended for entertainment purposes ONLY.
+Note that any dashboards, Rule Manager rules/scripts, etc. are NOT included with this driver and are NOT supported by the author of this driver.
+
+This driver SOLELY intended for entertainment purposes ONLY.
 
 Notes:  
+
+Upon installation, press the "Initialize" button on the virtual device's Commands tab to ensure that it is properly installed and initialized (this ensures the proper number of buttons is defined, etc.) and sets the State values.
 
 The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3).
 
 The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the current player, initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each square are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
 
-To "undo" the previous move, initiate a "hold button 39" on the virtual device.
+To "undo" the previous move, initiate a "hold button 39" on the virtual device or initiate an "undo" command on the virtual device.
 
-To "reset" the game, initiate a "push button 39" on the virtual device
+To "reset" the game, initiate a "push button 39" on the virtual device or initiate a "reset" command on the virtual device.
+
+
 
 =========
 
 NOTICE ABOUT WARRANTIES AND LIABILITY:
 
 By using this app, driver, or any related code in any manner whatsoever, you fully and completely agree to the following:
-
-YOU ARE FULLY RESPONSIBLE FOR ALWAYS HAVING A RELIABLE AND TRUSTED METHOD FOR OBTAINING WEATHER ALERTS. THIS APP AND RELATED CODE >>ARE NOT<< TO BE CONSIDERED RELIABLE OR TRUSTED METHODS FOR OBTAINING ANY WEATHER ALERTS.
 
 YOU take FULL AND COMPLETE responsibility for ANY AND ALL use of this app and related code and agree that ALL responsibility and liability for ANY use you make of the app or related code will be TOTALLY as if YOU developed this ENTIRELY ON YOUR OWN.
 

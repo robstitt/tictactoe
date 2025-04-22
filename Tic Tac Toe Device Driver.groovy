@@ -14,15 +14,30 @@
  *  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  *  for the specific language governing permissions and limitations under the License.
  *
+ *  This driver is intended to be assigned to a manually created "virtual device" on the Hubitat Home Automation platform. This "Tic-Tac-Toe"
+ *  device can be with a dashboard and Rule Manager rules/scripts to allow playing a Tic-Tac-Toe game.
+ *
+ *  If desired, physical, smart home RGBW bulbs (or other desired smart home devices) can controlled using Rule Manager rules/scripts to create
+ *  a visual Tic-Tac-Toe display board.
+ *
+ *  Note that any dashboards, Rule Manager rules/scripts, etc. are NOT included with this driver and are NOT supported by the author of this driver.
+ *
+ *  This driver SOLELY intended for entertainment purposes ONLY.
+ *
+ *  Notes:
+ *
+ *  Upon installation, press the "Initialize" button on the virtual device's Commands tab to ensure that it is properly installed and
+ *  initialized (this ensures the proper number of buttons is defined, etc.) and sets the State values.
+ *
  *  The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3).
  *
- *  The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the current player,
- *  initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each square
- *  are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
+ *  The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the
+ *  current player, initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each
+ *  square are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
  *
- *  To "undo" the previous move, initiate a "hold button 39" on the virtual device.
+ *  To "undo" the previous move, initiate a "hold button 39" on the virtual device or initiate an "undo" command on the virtual device.
  *
- *  To "reset" the game, initiate a "push button 39" on the virtual device
+ *  To "reset" the game, initiate a "push button 39" on the virtual device or initiate a "reset" command on the virtual device.
  *
  *-------------------------------------------------------------------------------------------------------------------
  *
