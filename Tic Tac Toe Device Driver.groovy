@@ -29,13 +29,16 @@
  *  Upon installation, press the "Initialize" button on the virtual device's Commands tab to ensure that it is properly installed and
  *  initialized (this ensures the proper number of buttons is defined, etc.) and sets the State values.
  *
- *  The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3).
+ *  The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3). The
+ *  initial value for each square in the grid is set to "-" (meaning it has not yet been selected). As each player selects squares, they will be
+ *  set to "X" or "O" depending on which player selected the square.
  *
  *  The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the
  *  current player, initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each
  *  square are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
  *
- *  To "undo" the previous move, initiate a "hold button 39" on the virtual device or initiate an "undo" command on the virtual device.
+ *  To "undo" the previous move, initiate a "hold button 39" on the virtual device or initiate an "undo" command on the virtual device. Note
+ *  that performing a "hold" on buttons 1-9 will deselect the corresponding square, but this is not normally done in a Tic-Tac-Toe game.
  *
  *  To "reset" the game, initiate a "push button 39" on the virtual device or initiate a "reset" command on the virtual device.
  *
