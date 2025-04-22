@@ -1,10 +1,21 @@
 # tictactoe
 Tic Tac Toe Driver For Hubitat
 
-This driverr supports creating a Tic-Tac-Toe device that can be used in a dashboard to create a Tic-Tac-Toe game running on the Hubitat. 
+This driver supports creating a Tic-Tac-Toe device that can be used in a dashboard to create a Tic-Tac-Toe game running on the Hubitat. 
+
 It can also be used to control smart automation devices of the user's choosing (the scripting, devices, etc. are NOT included and they are NOT supported).
 
 This is SOLELY intended for entertainment purposes ONLY.
+
+Notes:  
+
+The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3).
+
+The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the current player, initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each square are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
+
+To "undo" the previous move, initiate a "hold button 39" on the virtual device.
+
+To "reset" the game, initiate a "push button 39" on the virtual device
 
 =========
 
