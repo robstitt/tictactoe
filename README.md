@@ -13,7 +13,14 @@ Notes:
 
 Upon installation, press the "Initialize" button on the virtual device's Commands tab to ensure that it is properly installed and initialized (this ensures the proper number of buttons is defined, etc.) and sets the State values.
 
-The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as state values: A1, A2, A3, B1, B2, B3, C1, C2, C3). The initial value for each square in the grid is set to "-" (meaning it has not yet been selected). As each player selects squares, they will be set to "X" or "O" depending on which player selected the square.
+The Tic Tac Toe grid consists of columns A, B, and C and rows 1, 2, and 3 (referenced as attributes: A1, A2, A3, B1, B2, B3, C1, C2, C3). The initial value for each square in the grid is set to "-" (meaning it has not yet been selected). As each player selects squares, they will be set to "X" or "O" depending on which player selected the square.
+
+The following additional attributes are defined:
+
+- Message: A text field containing the current state of the game
+- numberOfButtons: This is the number of buttons defined for the device, but meant for internal use only
+- Player: The current player (X or O)
+- Winner: When a winner is detected, this will be "X" or "O". Until then, it is a "-" to indicate no winner yet.
 
 The driver automatically starts the game with the "X" player, automatically alternating between "X" and "O". To select a square as the current player, initiate a button press on the virtual device (e.g., "push button 1" to select square A1).  The button numbers for each square are A1=1, A2=2, A3=3, B1=4, B2=5, B3=6, C1=7, C2=8, C3=9.
 
