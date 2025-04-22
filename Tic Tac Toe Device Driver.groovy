@@ -25,7 +25,7 @@
  *
  * Created: 02/16/2024
  *
- * Last Update: 04/22/2025
+ * Last Update: 04/22/2025 - v1.1.0
  *    - Detect a stalemate
  *
  * Last Update: mm/dd/yyyy
